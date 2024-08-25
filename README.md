@@ -75,3 +75,12 @@ To run the classification and generative models, follow these steps:
 1. **Install Required Libraries:** Ensure you have the necessary Python libraries installed, including TensorFlow or PyTorch, depending on the implementation used.
    ```bash
    pip install tensorflow
+
+2. **Run the Classification Model:**
+  ```
+  python classification_model.py
+  ```
+3. **Run the Generative Model:**
+  ```
+  python generative_model.py
+  ```
