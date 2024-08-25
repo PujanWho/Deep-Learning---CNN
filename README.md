@@ -13,8 +13,8 @@ This project focuses on two key aspects of deep learning: image classification u
 - **Model Details:** The network uses hierarchical feature learning, translation invariance, parameter sharing, and pooling layers. The specific model implementation is inspired by the "SmallFiltersCNN" approach, which is a streamlined version suited for environments where a lighter model with fewer parameters is desired.
 - **Mathematical Formulation:**
 
-![Classification mathmetical notation part1](image1.png)
-![Classification mathmetical notation part2](image2.png)
+![Classification mathmetical notation part1](image1.png)</br>
+![Classification mathmetical notation part2](image2.png)</br>
 
 #### Results
 - **Parameters:** The network has 57,332 parameters.
@@ -42,14 +42,14 @@ This project focuses on two key aspects of deep learning: image classification u
 
 The training objective for the GAN is:
 
-![GAN equation](image3.png)
+![GAN equation](image3.png)</br>
 
 This adversarial game encourages the generator \( G \) to produce increasingly realistic images, while the discriminator \( D \) learns to better discriminate between real and fake images.
 
-![GAN part 2](image4.png)
+![GAN part 2](image4.png)</br>
 
 #### Results
-![image results](image5.png)
+![image results](image5.png)</br>
 Non-Cherry picked samples (left) and interpolants between points in the latent space (right).
 
 - **Parameters:**
