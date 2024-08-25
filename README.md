@@ -13,73 +13,8 @@ This project focuses on two key aspects of deep learning: image classification u
 - **Model Details:** The network uses hierarchical feature learning, translation invariance, parameter sharing, and pooling layers. The specific model implementation is inspired by the "SmallFiltersCNN" approach, which is a streamlined version suited for environments where a lighter model with fewer parameters is desired.
 - **Mathematical Formulation:**
 
-Let \( X \) be the input tensor of shape \([N, C_{in}, H_{in}, W_{in}]\), where:
-- \( N \) is the batch size,
-- \( C_{in} \) is the number of input channels,
-- \( H_{in} \) is the height of the input feature map,
-- \( W_{in} \) is the width of the input feature map.
-
-Let \( F^{(1)}, F^{(2)}, \dots, F^{(L)} \) be the learnable convolutional filters of the CNN, where \( L \) is the number of convolutional layers in the network.
-
-The forward pass equations for a CNN can be expressed as follows:
-
-\[
-Z^{(1)} = \text{Conv2d}(X, F^{(1)}) + b^{(1)}
-\]
-
-\[
-A^{(1)} = \text{Activation}(Z^{(1)})
-\]
-
-\[
-P^{(1)} = \text{Pooling}(A^{(1)})
-\]
-
-\[
-Z^{(L)} = \text{Conv2d}(P^{(L-1)}, F^{(L)}) + b^{(L)}
-\]
-
-\[
-A^{(L)} = \text{Activation}(Z^{(L)})
-\]
-
-\[
-P^{(L)} = \text{Pooling}(A^{(L)})
-\]
-
-\[
-F = \text{Flatten}(P^{(L)})
-\]
-
-\[
-Z_{fc} = W_{fc} \cdot F + b_{fc}
-\]
-
-\[
-\hat{Y} = \text{Softmax}(Z_{fc})
-\]
-
-Where:
-- \( Z^{(i)} \) represents the linear output of convolutional layer \( i \),
-- \( A^{(i)} \) represents the activation of convolutional layer \( i \),
-- \( P^{(i)} \) represents the output after pooling at convolutional layer \( i \),
-- \( F \) is the flattened feature map,
-- \( Z_{fc} \) represents the linear output of the fully connected layer(s),
-- \( \hat{Y} \) is the predicted class probabilities,
-- Activation denotes the activation function used in the convolutional layers, typically ReLU, and
-- Pooling denotes the pooling operation used after each convolutional layer, typically max pooling or average pooling.
-
-The convolutional operation can be expressed as:
-
-\[
-O = \sigma(I * K + b)
-\]
-
-Where:
-- \( I \) represents the input feature map,
-- \( K \) is the kernel (or filter) applied to the input feature map,
-- \( \sigma \) denotes the ReLU activation function applied element-wise,
-- \( b \) is the bias term added to each output feature map.
+![Classification mathmetical notation part1](image1.png)
+![Classification mathmetical notation part2](image2.png)
 
 #### Results
 - **Parameters:** The network has 57,332 parameters.
@@ -107,13 +42,16 @@ Where:
 
 The training objective for the GAN is:
 
-\[
-L_{GAN} = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log(1 - D(G(z)))]
-\]
+![GAN equation](image3.png)
 
 This adversarial game encourages the generator \( G \) to produce increasingly realistic images, while the discriminator \( D \) learns to better discriminate between real and fake images.
 
+![GAN part 2](image4.png)
+
 #### Results
+![image results](image5.png)
+Non-Cherry picked samples (left) and interpolants between points in the latent space (right).
+
 - **Parameters:**
   - Generator: 370,624 parameters
   - Discriminator: 167,808 parameters
