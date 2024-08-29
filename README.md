@@ -95,6 +95,7 @@ Where:
   - Testing Accuracy: 33.9%
   - Optimization Steps: 10,000
   - Training Loss: 2.338
+
   ![Training Results 1](trainingResult1.png)</br>
 - **Conclusion:** The results indicate moderate success in classifying the CIFAR-100 dataset. Further tuning and exploration of different architectures or activation functions could potentially improve performance.
 
@@ -128,6 +129,7 @@ This adversarial game encourages the generator $`G`$ to produce increasingly rea
   - Generator: 370,624 parameters
   - Discriminator: 167,808 parameters
   - Total: 538,432 parameters
+  
   ![Pictures, 2 8x8 images](image5.png)</br>
 - **Performance:**
   - FID (Fréchet Inception Distance) Score: 66.49
