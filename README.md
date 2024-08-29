@@ -7,7 +7,7 @@ This project focuses on two key aspects of deep learning: image classification u
 ### Part 1: Classification
 
 #### Methodology
-- **Approach:** The classification task is performed using a deep Convolutional Neural Network (CNN) with a non-linear activation function ReLU (`φ(x) = max(0, x)`).
+- **Approach:** The classification task is performed using a deep Convolutional Neural Network (CNN) with a non-linear activation function ReLU $`φ(x) = max(0, x)`$.
 - **Dataset:** CIFAR-100 dataset.
 - **Model Details:** The network uses hierarchical feature learning, translation invariance, parameter sharing, and pooling layers. The specific model implementation is inspired by the "SmallFiltersCNN" approach, which is a streamlined version suited for environments where a lighter model with fewer parameters is desired.
 - **Mathematical Formulation:**
