@@ -35,6 +35,10 @@ P^{(1)} = \text{Pooling}(A^{(1)})
 `$
 
 $`
+\vdots
+`$
+
+$`
 Z^{(L)} = \text{Conv2d}(P^{(L-1)}, F^{(L)}) + b^{(L)}
 `$
 
@@ -136,3 +140,9 @@ To run the classification and generative models, follow these steps:
 1. **Install Required Libraries:** Ensure you have the necessary Python libraries installed, including TensorFlow or PyTorch, depending on the implementation used.
    ```bash
    pip install tensorflow
+2. **Run the Classification Model:**
+   ```bash
+   python classification_model.py
+1. **Run the Generative Model:**
+   ```bash
+   python generative_model.py
