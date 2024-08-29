@@ -95,6 +95,7 @@ Where:
   - Testing Accuracy: 33.9%
   - Optimization Steps: 10,000
   - Training Loss: 2.338
+  ![Training Results 1](trainingResult1.png)</br>
 - **Conclusion:** The results indicate moderate success in classifying the CIFAR-100 dataset. Further tuning and exploration of different architectures or activation functions could potentially improve performance.
 
 #### Limitations
@@ -120,11 +121,14 @@ L_{GAN} = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)
 
 This adversarial game encourages the generator $`G`$ to produce increasingly realistic images, while the discriminator $`D`$ learns to better discriminate between real and fake images.
 
+  ![LGAN img](image4.png)</br>
+
 #### Results
 - **Parameters:**
   - Generator: 370,624 parameters
   - Discriminator: 167,808 parameters
   - Total: 538,432 parameters
+  ![Pictures, 2 8x8 images](image5.png)</br>
 - **Performance:**
   - FID (Fréchet Inception Distance) Score: 66.49
   - Optimization Steps: 50,000
