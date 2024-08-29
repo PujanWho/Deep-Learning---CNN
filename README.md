@@ -21,7 +21,7 @@ Let $`X`$ be the input tensor of shape $`[N, C_{in}, H_{in}, W_{in}]`$, where:
 Let $`F^{(1)}, F^{(2)}, \dots, F^{(L)}`$ be the learnable convolutional filters of the CNN, where $`L`$ is the number of convolutional layers in the network.
 
 The forward pass equations for a CNN can be expressed as follows:
-
+<div align="center">
 $`
 Z^{(1)} = \text{Conv2d}(X, F^{(1)}) + b^{(1)}
 `$
@@ -61,6 +61,8 @@ Z_{fc} = W_{fc} \cdot F + b_{fc}
 $`
 \hat{Y} = \text{Softmax}(Z_{fc})
 `$
+
+</div>
 
 Where:
 - $`Z^{(i)}`$ represents the linear output of convolutional layer $`i`$,
